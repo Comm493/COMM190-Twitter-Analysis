@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <form class="ajax_form" method="POST" action="/analyze-twitter/">
+                    <!-- Musk -->
+                    <input role="radio" class="hidden" type="radio" id="twitter-elonmusk" name="twitter_handle" value="elonmusk" data-lang="en">
+                    <label class="radio_label_square" for="twitter-elonmusk"><span class='active_indicator'></span>
+                    <img class="twitter_thumbnail" src="/static/images/twitter/elonmusk.jpg">@elonmusk</label>
+
+                    <!-- sandberg -->
+                    <input role="radio" class="hidden" type="radio" id="twitter-sherylsandberg" name="twitter_handle" value="sherylsandberg" data-lang="en">
+                    <label class="radio_label_square" for="twitter-sherylsandberg"><span class='active_indicator'></span>
+                    <img class="twitter_thumbnail" src="/static/images/twitter/sherylsandberg.jpg">@sherylsandberg</label>
+
+                    <!-- Bezos -->
+                    <input role="radio" class="hidden" type="radio" id="twitter-JeffBezos" name="twitter_handle" value="JeffBezos" data-lang="en">
+                    <label class="radio_label_square" for="twitter-JeffBezos"><span class='active_indicator'></span>
+                    <img class="twitter_thumbnail" src="/static/images/twitter/JeffBezos.jpg">@JeffBezos</label>
+
+                    <!-- User Input -->
+                    <input role="radio" class="hidden" type="radio" id="twitter-user" name="twitter_handle" value="user_handle" data-lang="en">
+                    <label class="radio_label_square" for="twitter-user"><span class='active_indicator'></span>
+                    <img class="twitter_thumbnail" src="/static/images/twitter/question.png">
+                        <label>@<input type="text" placeholder="SomeTwitterUser" id="user_twitter_handle"></label>
+                    </label>
+
+                    <!-- Input -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="submit" class="form-control btn-primary" value="Analyze" />                               
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="jumbotron results_jumbo hidden">
+        <div class="container loader">
+            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+            </svg>
+        </div>
+        <div class="container results">
+            <h2>Results</h2>
+            <div id="word_count_alert" class="alert show" role="alert">
+                <h3 class="alert-heading" id="word_count_alert_heading"></h3>
+                <p>These results are based off an analysis of <span id="__results_wordcount"></span> words.</p>
+                <p id="word_count_alert_message"></p>
+            </div>
+
+            <div class="row well">
+                <div class="col-md-4 summary">
+                    <h3>Summary</h3>
+                    <p class='text-muted'><span class="twitter_handle_summary text-info"></span> scores most highly on <span class="big5_high_summary text-success"></span> which has the following attributes: <span class="big5_high_text_summary text-default"></span> They scored least highly on <span class="big5_low_summary text-danger"></span> which has the following attributes: <span class="big5_low_text_summary text-default"></span></p>
+                    <p><span class="twitter_handle_summary text-info"></span> appears to need <span class='text-info needs_1_summary'></span>, <span class='text-info needs_2_summary'></span>, and <span class='text-info needs_3_summary'></span> the most. It appears as though they are less in need of <span class='text-warning needs_low_1_summary'></span>, <span class='text-warning needs_low_2_summary'></span>, and <span class='text-warning needs_low_3_summary'></span>.</p>
+                    <p>Above all else, <span class="twitter_handle_summary text-info"></span> values <span class='text-success values_summary'></span>, and places less value on <span class='text-danger values_low_summary'></span>.</p>
+                </div>
+                <div class="col-md-8 summary">
+                    <h4>Tweet Contents</h4>
+                    <p>The following histogram shows the results for the following tones within the previous 50 Tweets that <span class="twitter_handle_summary text-info"></span> has made. Only those tones which scored 0.75 or higher are counted in the results.</p>
+                    <div id="histogram_holder"></div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-info">
+                        <strong>Note: </strong> the percentages listed below on these traits represent the user's percentile along that metric.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 row">
+                    <div class="well col-md-10">
+                        <h5>Personality</h5>
+                        <div id="__results_personality_list"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 row">
+                    <div class="well col-md-10 col-md-offset-1">
+                        <h5>Needs</h5>
+                        <div id="__results_needs_list"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 row">
+                    <div class="well col-md-10 col-md-offset-2">
+                        <h5>Values</h5>
+                        <div id="__results_values_list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="consumption_list" class="col-md-5">
+
+                </div>
+                <div class="col-md-7">
+                    <div class='tone_results'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip-holder">
+        {% include 'tooltips.html' %}
+    </div>
+{% endblock %}

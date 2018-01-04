@@ -1,0 +1,1133 @@
+{
+    "profile": {
+        "processed_language": "en",
+        "consumption_preferences": [
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to be sensitive to ownership cost when buying automobiles",
+                        "consumption_preference_id": "consumption_preferences_automobile_ownership_cost",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to prefer safety when buying automobiles",
+                        "consumption_preference_id": "consumption_preferences_automobile_safety",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to prefer quality when buying clothes",
+                        "consumption_preference_id": "consumption_preferences_clothes_quality",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to prefer style when buying clothes",
+                        "consumption_preference_id": "consumption_preferences_clothes_style",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to prefer comfort when buying clothes",
+                        "consumption_preference_id": "consumption_preferences_clothes_comfort",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to be influenced by brand name when making product purchases",
+                        "consumption_preference_id": "consumption_preferences_influence_brand_name",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to be influenced by product utility when making product purchases",
+                        "consumption_preference_id": "consumption_preferences_influence_utility",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to be influenced by online ads when making product purchases",
+                        "consumption_preference_id": "consumption_preferences_influence_online_ads",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to be influenced by social media when making product purchases",
+                        "consumption_preference_id": "consumption_preferences_influence_social_media",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to be influenced by family when making product purchases",
+                        "consumption_preference_id": "consumption_preferences_influence_family_members",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to indulge in spur of the moment purchases",
+                        "consumption_preference_id": "consumption_preferences_spur_of_moment",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to prefer using credit cards for shopping",
+                        "consumption_preference_id": "consumption_preferences_credit_card_payment",
+                        "score": 1.0
+                    }
+                ],
+                "name": "Purchasing Preferences",
+                "consumption_preference_category_id": "consumption_preferences_shopping"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to eat out frequently",
+                        "consumption_preference_id": "consumption_preferences_eat_out",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to have a gym membership",
+                        "consumption_preference_id": "consumption_preferences_gym_membership",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like outdoor activities",
+                        "consumption_preference_id": "consumption_preferences_outdoor",
+                        "score": 1.0
+                    }
+                ],
+                "name": "Health & Activity Preferences",
+                "consumption_preference_category_id": "consumption_preferences_health_and_activity"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to be concerned about the environment",
+                        "consumption_preference_id": "consumption_preferences_concerned_environment",
+                        "score": 0.5
+                    }
+                ],
+                "name": "Environmental Concern Preferences",
+                "consumption_preference_category_id": "consumption_preferences_environmental_concern"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to consider starting a business in next few years",
+                        "consumption_preference_id": "consumption_preferences_start_business",
+                        "score": 0.5
+                    }
+                ],
+                "name": "Entrepreneurship Preferences",
+                "consumption_preference_category_id": "consumption_preferences_entrepreneurship"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to like romance movies",
+                        "consumption_preference_id": "consumption_preferences_movie_romance",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like adventure movies",
+                        "consumption_preference_id": "consumption_preferences_movie_adventure",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to like horror movies",
+                        "consumption_preference_id": "consumption_preferences_movie_horror",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like musical movies",
+                        "consumption_preference_id": "consumption_preferences_movie_musical",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like historical movies",
+                        "consumption_preference_id": "consumption_preferences_movie_historical",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like science-fiction movies",
+                        "consumption_preference_id": "consumption_preferences_movie_science_fiction",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to like war movies",
+                        "consumption_preference_id": "consumption_preferences_movie_war",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like drama movies",
+                        "consumption_preference_id": "consumption_preferences_movie_drama",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to like action movies",
+                        "consumption_preference_id": "consumption_preferences_movie_action",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to like documentary movies",
+                        "consumption_preference_id": "consumption_preferences_movie_documentary",
+                        "score": 1.0
+                    }
+                ],
+                "name": "Movie Preferences",
+                "consumption_preference_category_id": "consumption_preferences_movie"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to like rap music",
+                        "consumption_preference_id": "consumption_preferences_music_rap",
+                        "score": 0.5
+                    },
+                    {
+                        "name": "Likely to like country music",
+                        "consumption_preference_id": "consumption_preferences_music_country",
+                        "score": 0.5
+                    },
+                    {
+                        "name": "Likely to like R&B music",
+                        "consumption_preference_id": "consumption_preferences_music_r_b",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like hip hop music",
+                        "consumption_preference_id": "consumption_preferences_music_hip_hop",
+                        "score": 0.5
+                    },
+                    {
+                        "name": "Likely to attend live musical events",
+                        "consumption_preference_id": "consumption_preferences_music_live_event",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to have experience playing music",
+                        "consumption_preference_id": "consumption_preferences_music_playing",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to like Latin music",
+                        "consumption_preference_id": "consumption_preferences_music_latin",
+                        "score": 0.5
+                    },
+                    {
+                        "name": "Likely to like rock music",
+                        "consumption_preference_id": "consumption_preferences_music_rock",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to like classical music",
+                        "consumption_preference_id": "consumption_preferences_music_classical",
+                        "score": 0.5
+                    }
+                ],
+                "name": "Music Preferences",
+                "consumption_preference_category_id": "consumption_preferences_music"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to read often",
+                        "consumption_preference_id": "consumption_preferences_read_frequency",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to read entertainment magazines",
+                        "consumption_preference_id": "consumption_preferences_books_entertainment_magazines",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to read non-fiction books",
+                        "consumption_preference_id": "consumption_preferences_books_non_fiction",
+                        "score": 1.0
+                    },
+                    {
+                        "name": "Likely to read financial investment books",
+                        "consumption_preference_id": "consumption_preferences_books_financial_investing",
+                        "score": 0.0
+                    },
+                    {
+                        "name": "Likely to read autobiographical books",
+                        "consumption_preference_id": "consumption_preferences_books_autobiographies",
+                        "score": 1.0
+                    }
+                ],
+                "name": "Reading Preferences",
+                "consumption_preference_category_id": "consumption_preferences_reading"
+            },
+            {
+                "consumption_preferences": [
+                    {
+                        "name": "Likely to volunteer for social causes",
+                        "consumption_preference_id": "consumption_preferences_volunteer",
+                        "score": 0.0
+                    }
+                ],
+                "name": "Volunteering Preferences",
+                "consumption_preference_category_id": "consumption_preferences_volunteering"
+            }
+        ],
+        "personality": [
+            {
+                "children": [
+                    {
+                        "trait_id": "facet_adventurousness",
+                        "name": "Adventurousness",
+                        "percentile": 0.24605858594684304,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_artistic_interests",
+                        "name": "Artistic interests",
+                        "percentile": 0.8993020600053272,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_emotionality",
+                        "name": "Emotionality",
+                        "percentile": 0.2482466702508731,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_imagination",
+                        "name": "Imagination",
+                        "percentile": 0.8264649057825101,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_intellect",
+                        "name": "Intellect",
+                        "percentile": 0.7691289825178458,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_liberalism",
+                        "name": "Authority-challenging",
+                        "percentile": 0.905543742383861,
+                        "category": "personality"
+                    }
+                ],
+                "trait_id": "big5_openness",
+                "name": "Openness",
+                "percentile": 0.3132887471823885,
+                "category": "personality"
+            },
+            {
+                "children": [
+                    {
+                        "trait_id": "facet_achievement_striving",
+                        "name": "Achievement striving",
+                        "percentile": 0.40601410387669545,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_cautiousness",
+                        "name": "Cautiousness",
+                        "percentile": 0.4810756491466732,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_dutifulness",
+                        "name": "Dutifulness",
+                        "percentile": 0.01661725881852627,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_orderliness",
+                        "name": "Orderliness",
+                        "percentile": 0.4197704198334894,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_self_discipline",
+                        "name": "Self-discipline",
+                        "percentile": 0.3700638055232478,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_self_efficacy",
+                        "name": "Self-efficacy",
+                        "percentile": 0.6625750798775953,
+                        "category": "personality"
+                    }
+                ],
+                "trait_id": "big5_conscientiousness",
+                "name": "Conscientiousness",
+                "percentile": 0.4463631669219015,
+                "category": "personality"
+            },
+            {
+                "children": [
+                    {
+                        "trait_id": "facet_activity_level",
+                        "name": "Activity level",
+                        "percentile": 0.5278825575150978,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_assertiveness",
+                        "name": "Assertiveness",
+                        "percentile": 0.4257922779341996,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_cheerfulness",
+                        "name": "Cheerfulness",
+                        "percentile": 0.22083060607675903,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_excitement_seeking",
+                        "name": "Excitement-seeking",
+                        "percentile": 0.9631841923008282,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_friendliness",
+                        "name": "Outgoing",
+                        "percentile": 0.12148466177564632,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_gregariousness",
+                        "name": "Gregariousness",
+                        "percentile": 0.16471488170705278,
+                        "category": "personality"
+                    }
+                ],
+                "trait_id": "big5_extraversion",
+                "name": "Extraversion",
+                "percentile": 0.6305454746366677,
+                "category": "personality"
+            },
+            {
+                "children": [
+                    {
+                        "trait_id": "facet_altruism",
+                        "name": "Altruism",
+                        "percentile": 0.1012760641711763,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_cooperation",
+                        "name": "Cooperation",
+                        "percentile": 0.11267081026017356,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_modesty",
+                        "name": "Modesty",
+                        "percentile": 0.3211918618906684,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_morality",
+                        "name": "Uncompromising",
+                        "percentile": 0.14404170936636818,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_sympathy",
+                        "name": "Sympathy",
+                        "percentile": 0.4385887212801702,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_trust",
+                        "name": "Trust",
+                        "percentile": 0.6580359199331935,
+                        "category": "personality"
+                    }
+                ],
+                "trait_id": "big5_agreeableness",
+                "name": "Agreeableness",
+                "percentile": 0.37165820049700315,
+                "category": "personality"
+            },
+            {
+                "children": [
+                    {
+                        "trait_id": "facet_anger",
+                        "name": "Fiery",
+                        "percentile": 0.8516897763986326,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_anxiety",
+                        "name": "Prone to worry",
+                        "percentile": 0.8840561020919078,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_depression",
+                        "name": "Melancholy",
+                        "percentile": 0.735195440000118,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_immoderation",
+                        "name": "Immoderation",
+                        "percentile": 0.09241198468026224,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_self_consciousness",
+                        "name": "Self-consciousness",
+                        "percentile": 0.9225666041835668,
+                        "category": "personality"
+                    },
+                    {
+                        "trait_id": "facet_vulnerability",
+                        "name": "Susceptible to stress",
+                        "percentile": 0.9072967970049435,
+                        "category": "personality"
+                    }
+                ],
+                "trait_id": "big5_neuroticism",
+                "name": "Emotional range",
+                "percentile": 0.15307932385191564,
+                "category": "personality"
+            }
+        ],
+        "needs": [
+            {
+                "trait_id": "need_challenge",
+                "name": "Challenge",
+                "percentile": 0.334866415796989,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_closeness",
+                "name": "Closeness",
+                "percentile": 0.28517178499871065,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_curiosity",
+                "name": "Curiosity",
+                "percentile": 0.40379861464373146,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_excitement",
+                "name": "Excitement",
+                "percentile": 0.34897004603232673,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_harmony",
+                "name": "Harmony",
+                "percentile": 0.2566470784239314,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_ideal",
+                "name": "Ideal",
+                "percentile": 0.5748429948651589,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_liberty",
+                "name": "Liberty",
+                "percentile": 0.11589632029789743,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_love",
+                "name": "Love",
+                "percentile": 0.43140112588286395,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_practicality",
+                "name": "Practicality",
+                "percentile": 0.36068667230209117,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_self_expression",
+                "name": "Self-expression",
+                "percentile": 0.4822539403834966,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_stability",
+                "name": "Stability",
+                "percentile": 0.21768102484329965,
+                "category": "needs"
+            },
+            {
+                "trait_id": "need_structure",
+                "name": "Structure",
+                "percentile": 0.5105142510869511,
+                "category": "needs"
+            }
+        ],
+        "values": [
+            {
+                "trait_id": "value_conservation",
+                "name": "Conservation",
+                "percentile": 0.26144296502647146,
+                "category": "values"
+            },
+            {
+                "trait_id": "value_openness_to_change",
+                "name": "Openness to change",
+                "percentile": 0.2865884346298926,
+                "category": "values"
+            },
+            {
+                "trait_id": "value_hedonism",
+                "name": "Hedonism",
+                "percentile": 0.43219077998895394,
+                "category": "values"
+            },
+            {
+                "trait_id": "value_self_enhancement",
+                "name": "Self-enhancement",
+                "percentile": 0.3120859521764584,
+                "category": "values"
+            },
+            {
+                "trait_id": "value_self_transcendence",
+                "name": "Self-transcendence",
+                "percentile": 0.025045505239615073,
+                "category": "values"
+            }
+        ],
+        "word_count": 3781,
+        "warnings": [],
+        "tones": {
+            "utterances_tone": [
+                {
+                    "utterance_id": 0,
+                    "utterance_text": "Our waterfronts are for everyone to enjoy. Today, we take steps to protect Toronto's Port Lands &amp; grow the economy: https://t.co/691PNX938Q",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.916627
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 1,
+                    "utterance_text": "Nous devons tous pouvoir profiter du bord de l\u2019eau. Donc, nous le prot\u00e9geons \u00e0 Toronto en d\u00e9veloppant l\u2019\u00e9conomie : https://t.co/PISwXyG4c2",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.5
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 2,
+                    "utterance_text": "It was a pleasure to welcome Italian President Mattarella to the Hill today as we strengthen the enduring friendshi\u2026 https://t.co/0nTtezyuDa",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 3,
+                    "utterance_text": "C\u2019\u00e9tait un plaisir d\u2019accueillir le pr\u00e9sident italien Mattarella sur la Colline aujourd\u2019hui pour resserrer la solide\u2026 https://t.co/fz4dV2Ut2S",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 4,
+                    "utterance_text": "@PattyHajdu Thanks Patty. I\u2019m looking forward to reading it, hearing their ideas and getting back to them\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.81055
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 5,
+                    "utterance_text": "Diversity is our strength \u2013 and the students at @BerriganSchool are embracing it. Thanks for the Multiculturalism D\u2026 https://t.co/bTGc3FabR4",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.685268
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.800888
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 6,
+                    "utterance_text": "La diversit\u00e9 est notre force \u2013 et les \u00e9l\u00e8ves de @BerriganSchool le savent. Merci pour les Q-R de la Journ\u00e9e du mult\u2026 https://t.co/DbzK1auJOx",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 7,
+                    "utterance_text": "Today, I\u2019m pleased to announce Jennifer MacIntyre will become Canada\u2019s new Ambassador for Climate Change: https://t.co/M4oj72rLnL",
+                    "tones": [
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.820166
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 8,
+                    "utterance_text": "J\u2019ai le plaisir d\u2019annoncer que Jennifer MacIntyre sera l\u2019ambassadrice du Canada pour les changements climatiques : https://t.co/KN0oz9So8s",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.883419
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 9,
+                    "utterance_text": "We\u2019re working to improve the lives of Canada\u2019s seniors \u2013 thanks to @CarpAdvocacy for the meeting in Ottawa this mor\u2026 https://t.co/teho9j99Zf",
+                    "tones": [
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.80406
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 10,
+                    "utterance_text": "Nous travaillons \u00e0 am\u00e9liorer la qualit\u00e9 de vie des personnes \u00e2g\u00e9es du Canada. Merci \u00e0 @CarpAdvocacy pour la rencont\u2026 https://t.co/uaXcVYUEMI",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.702745
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 11,
+                    "utterance_text": "Canada is strong not in spite of our differences, but because of them. Today, and every day, we celebrate diversity: https://t.co/DbKBqaCHNY",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 12,
+                    "utterance_text": "Le Canada est fort non pas malgr\u00e9 nos diff\u00e9rences, mais gr\u00e2ce \u00e0 elles. Nous c\u00e9l\u00e9brons la diversit\u00e9 tous les jours : https://t.co/wvRa6130pe",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 13,
+                    "utterance_text": "RT @FuhrMP: We have much 2b thankful 4 &amp; proud of as a nation. My intuition tells me the best is yet to come. #canada150 \nhttps://t.co/l4cF\u2026",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 14,
+                    "utterance_text": "RT @stbstvdan: Au lancement du bureau mobile de proximit\u00e9 de MMF par ministre Bennett &amp; pr\u00e9sident Chartrand. Aidera M\u00e9tis au MB! https://t.\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.558932
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 15,
+                    "utterance_text": "In the last year, our economy created over 300K new jobs. Our plan is working - and we're going to keep working to grow the middle class.",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 16,
+                    "utterance_text": "Durant l\u2019ann\u00e9e, notre \u00e9conomie a cr\u00e9\u00e9 plus de 300 000 emplois. Notre plan va bon train, et nous allons continuer pour la classe moyenne.",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 17,
+                    "utterance_text": "Canadians always show compassion in a crisis - help some of the world\u2019s most vulnerable now &amp; we'll match it:\u2026 https://t.co/kzPdEnZIe7",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.72433
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 18,
+                    "utterance_text": "Les Canadiens ont le c\u0153ur sur la main en temps de crise. Aidez les plus vuln\u00e9rables et nous verserons la m\u00eame somme\u2026 https://t.co/F70o0b3gIE",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 19,
+                    "utterance_text": "RT @ec_minister: Very happy to announce with Minister David Heurtel, the St. Lawrence\u2019s new program for a healthy #StLawrenceRiver. https:/\u2026",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 20,
+                    "utterance_text": "RT @ministre_ec: Tr\u00e8s heureuse d\u2019annoncer avec ministre David Heurtel, la programmation du Plan #StLaurent pour un fleuve en sant\u00e9. https:/\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.681213
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 21,
+                    "utterance_text": ".@rihanna we've got your back! Thanks to @mclaudebibeau who made sure girls' education is in our feminist international development policy.",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.894227
+                        },
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.946618
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.736654
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 22,
+                    "utterance_text": "Love is love. #PrideTO https://t.co/z2No7rdchZ",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.874877
+                        },
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.68052
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.718697
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 23,
+                    "utterance_text": "L'amour, c'est l'amour. #PrideTO https://t.co/5ofOM25U94",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 24,
+                    "utterance_text": "At @mcctoronto's Faith + Pride service this morning - thanks to Reverend Hawkes for an inspiring service &amp; all the\u2026 https://t.co/XeBROIDzYP",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.853053
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.779808
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 25,
+                    "utterance_text": "\u00c0 la c\u00e9l\u00e9bration Faith + Pride de la @mcctoronto - merci au r\u00e9v\u00e9rend Hawkes pour sa liturgie inspirante et tous mes\u2026 https://t.co/039afUPX67",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 26,
+                    "utterance_text": "RT @melaniejoly: Mission accomplie pour le #24juin la f\u00eate des Qu\u00e9b\u00e9cois &amp; francophones partout au pays! #polcan #ConstellationFranco https\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.614331
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 27,
+                    "utterance_text": "RT @melaniejoly: The F\u00eate nationale du Qu\u00e9bec is for all Quebecois, no matter their origins. No space for exclusion. https://t.co/HEx7FvCrf0",
+                    "tones": [
+                        {
+                            "tone_name": "frustrated",
+                            "tone_id": "frustrated",
+                            "score": 0.731292
+                        },
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.75575
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 28,
+                    "utterance_text": "RT @melaniejoly: La F\u00eate nationale du Qu\u00e9bec est la f\u00eate de tous les Qu\u00e9b\u00e9cois, de toutes les origines. Pas de place pour l'exclusion https\u2026",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 29,
+                    "utterance_text": "The community spirit felt at Ramadan food banks in Montreal &amp; Toronto reminds us all: no matter our backgrounds, we\u2026 https://t.co/H46SOHNHaw",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 30,
+                    "utterance_text": "Entraide aux banques alimentaires du ramadan \u00e0 Mtl et \u00e0 Toronto: peu importe notre origine, nous sommes solidaires. https://t.co/gCbkkp0dSE",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.690117
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 31,
+                    "utterance_text": "Eid Mubarak! My best wishes to Muslims celebrating Eid al-Fitr tonight. https://t.co/HD5iqu5tIV",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.921642
+                        },
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.86131
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 32,
+                    "utterance_text": "A\u00efd Moubarak! Mes meilleurs v\u0153ux aux musulmans qui c\u00e9l\u00e8brent l\u2019A\u00efd al-Fitr ce soir. https://t.co/jZx2YM1nwL",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.675892
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 33,
+                    "utterance_text": "Celebrating #FeteNationale &amp; #SaintJeanBaptiste with the family in Papineau today - always a fun time! https://t.co/FOSsE9SNpq",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.928066
+                        },
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.841458
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 34,
+                    "utterance_text": "C\u00e9l\u00e9bration de la #F\u00eateNationale et de la #SaintJeanBaptiste en famille dans Papineau  - c'est toujours un plaisir ! https://t.co/0Qei5VfrLF",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 35,
+                    "utterance_text": "Saturday morning meeting with the Papineau Youth Council, exchanging ideas on how we can make sure our policies ben\u2026 https://t.co/xO98fVlzmW",
+                    "tones": [
+                        {
+                            "tone_name": "frustrated",
+                            "tone_id": "frustrated",
+                            "score": 0.810567
+                        },
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.556912
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 36,
+                    "utterance_text": "Samedi matin, r\u00e9union avec le Conseil jeunesse de Papineau pour \u00e9changer sur la fa\u00e7on de rendre nos politiques util\u2026 https://t.co/lCNGOSnmjC",
+                    "tones": []
+                },
+                {
+                    "utterance_id": 37,
+                    "utterance_text": "To Quebecers, Francophones &amp; everyone celebrating today: Happy F\u00eate nationale du Qu\u00e9bec and Saint-Jean-Baptiste Day! https://t.co/AhFGsJ66Hn",
+                    "tones": [
+                        {
+                            "tone_name": "excited",
+                            "tone_id": "excited",
+                            "score": 0.934593
+                        },
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.936666
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 38,
+                    "utterance_text": "Aux Qu\u00e9b\u00e9cois, aux francophones et \u00e0 tous ceux qui c\u00e9l\u00e8brent : Bonne F\u00eate nationale du Qu\u00e9bec et bonne Saint-Jean! https://t.co/iwNl0rcx3F",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.870867
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 39,
+                    "utterance_text": "A little rain couldn\u2019t dampen the festivities in Quebec. What a great day! https://t.co/zQ0SNIkBrM",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.767147
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.571251
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 40,
+                    "utterance_text": "M\u00eame la pluie n\u2019est pas parvenue \u00e0 refroidir notre enthousiasme aux festivit\u00e9s au Qu\u00e9bec. Quelle belle journ\u00e9e! https://t.co/3fDw1hZpEv",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.510389
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 41,
+                    "utterance_text": "RT @melaniejoly: Exciting news! Look forward to seeing U2! It's a beautiful (Canada) Day! #Canada150 #CanadaDay https://t.co/OqeMzZGVSz",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.953835
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.652636
+                        },
+                        {
+                            "tone_name": "sympathetic",
+                            "tone_id": "sympathetic",
+                            "score": 0.849664
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 42,
+                    "utterance_text": "RT @melaniejoly: Wow! La #FeteDuCanada sera formidable! Tr\u00e8s h\u00e2te de voir @U2 sur la Colline du Parlement! #Canada150 https://t.co/x5dWaUkL\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.757491
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 43,
+                    "utterance_text": "RT @jyduclos: Celebrating la F\u00eate nationale in @villesaintaug with @JustinTrudeau and @JoelLightbound. Thanks to everyone who joined us! ht\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.848741
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.509187
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 44,
+                    "utterance_text": "RT @jyduclos: C\u2019est un plaisir de c\u00e9l\u00e9brer la F\u00eate nationale \u00e0 @villesaintaug avec @JustinTrudeau et @JoelLightbound. Merci pour l\u2019accueil!\u2026",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.5
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 45,
+                    "utterance_text": "Thanks for the warm welcome in Boischatel today \u2013 happy to be celebrating la F\u00eate nationale and Saint-Jean-Baptiste\u2026 https://t.co/jXhi0EQcqq",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.944839
+                        },
+                        {
+                            "tone_name": "satisfied",
+                            "tone_id": "satisfied",
+                            "score": 0.643414
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 46,
+                    "utterance_text": "Merci pour le bel accueil \u00e0 Boischatel! Je suis heureux de c\u00e9l\u00e9brer la F\u00eate nationale et la Saint-Jean-Baptiste dan\u2026 https://t.co/e3B0p8XQ4e",
+                    "tones": [
+                        {
+                            "tone_name": "polite",
+                            "tone_id": "polite",
+                            "score": 0.814502
+                        },
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.683283
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 47,
+                    "utterance_text": "On behalf of Canadians, I send my sympathies to the families &amp; loved ones of those killed in today\u2019s attacks in Pakistan.",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.653882
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 48,
+                    "utterance_text": "Au nom des Canadiens, j\u2019offre mes condol\u00e9ances aux familles et aux proches des victimes de l\u2019attentat survenu au Pakistan.",
+                    "tones": [
+                        {
+                            "tone_name": "sad",
+                            "tone_id": "sad",
+                            "score": 0.652005
+                        }
+                    ]
+                },
+                {
+                    "utterance_id": 49,
+                    "utterance_text": "Read my full statement on National Day of Remembrance for Victims of Terrorism: https://t.co/hgaGODBvcd",
+                    "tones": []
+                }
+            ]
+        }
+    },
+    "expiry": 1498697227.1170473
+}

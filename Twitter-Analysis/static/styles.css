@@ -1,0 +1,213 @@
+body, html{
+  background: #F9F9F9;
+}
+
+label.radio_label_square {
+    display: inline-block;
+    width: 300px;
+    height: 105px;
+    background: #FFF;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #AAA;
+}
+
+img.twitter_thumbnail {
+    width: 75px;
+    height: 75px;
+    margin-right: 15px;
+    border: 2px solid #DDD;
+    border-radius: 50%;
+}
+
+span.active_indicator {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  background: #039be5;
+  display: none;
+}
+
+input.hidden[type="radio"]:checked + label.radio_label_square > span.active_indicator {
+  display: block;
+}
+
+.results {
+  display: none;
+}
+
+.children {
+    border-top: 1px solid rgba(0,0,0,0.3);
+    margin-top: -20px;
+    padding-top: 10px;
+    margin-left: 5%;
+    width: 95%;
+    display: none;
+}
+span.child_label {
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 100%;
+    display: block;
+}
+
+input#user_twitter_handle {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #333;
+  width: 150px;
+}
+
+.results_jumbo.jumbotron {
+  margin-bottom: 0px;
+}
+
+.tweet_text {
+    background: rgba(255,255,255,0.3);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    margin-bottom: 8px;
+    font-size: 10px;
+}
+
+.tweet_text p {
+  font-size: 15px;
+  margin: 0;
+}
+
+
+.summary p {
+  font-size: 17px;
+}
+
+.summary p span {
+  font-weight: 600;
+}
+
+.text-default {
+  color: #333;
+}
+
+#word_count_alert p {
+    font-size: 16px;
+}
+
+#word_count_alert  h3#alert-heading {
+  font-weight: bolder;
+}
+
+/*
+* CSS Spinner
+*/ 
+.loader {
+  text-align: center;
+  padding: 50px;
+  display: none;
+}
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}

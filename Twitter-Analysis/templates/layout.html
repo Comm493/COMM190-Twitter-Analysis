@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COMM 190 - Tone Analyzer + Personality Insights Demo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/styles.css" rel="stylesheet">
+
+    <!-- Histogram Drawing -->  
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+ 
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>COMM190: Watson Demos</h1>
+            <p>
+                The following leverages the <a href="https://www.ibm.com/watson/services/personality-insights/" target="_BLANK">Personality Insights</a> and <a href="https://www.ibm.com/watson/services/tone-analyzer/" target="_BLANK">Tone Analyzer</a> services. 
+            </p>
+        </div>
+    </div>
+    <div class="body_container">
+        {% block body %}{% endblock %}
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/antixss.js" type="text/javascript"></script>
+
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+
+        $(".ajax_form").on("submit", function(){
+            if ($("input[name='twitter_handle']:checked").length <= 0) {
+                return false;
+            }
+
+            if($("input[name='twitter_handle']:checked").attr("id") == "twitter-user") {
+                $("#twitter-user").val($("#user_twitter_handle").val());
+            }
+            var submittedData = $(this).serialize();
+            
+            $.ajax({
+                url: "/analyze-twitter/",
+                method: "POST",
+                data: submittedData,
+                beforeSend: function(){
+                    $(".results").hide();
+                    $(".loader").show();
+
+                    // Show the Jumbotron
+                    $(".results_jumbo").removeClass('hidden');
+
+                    $("#__results_wordcount").text("");
+                    $("#__results_needs_list").html("");
+                    $("#__results_values_list").html("");
+                    $("#__results_personality_list").html("");
+                    $(".tone_results").html("");
+                    $("#consumption_list").html("");
+
+                },
+                success: function(response) {
+                    // console.log(response);
+                    // Process Results
+                    $(".loader").hide();
+                    $(".results").show();  
+
+                    // Specify Word Count
+                    $("#__results_wordcount").text(response['word_count']);
+                    $("#word_count_alert").removeClass('alert-success');
+                    $("#word_count_alert").removeClass('alert-warning');
+                    $("#word_count_alert").removeClass('alert-danger');
+                    if (response['word_count'] >= 6000) {
+                        $("#word_count_alert").addClass('alert-success');
+                        $("#word_count_alert_heading").text("Wow!");
+                        $("#word_count_alert_message").text("A word count of 6000 or more is a high-quality assessment of someone's personality. It's statistically significant.");
+                    } else if (response['word_count'] >= 3500) {
+                        $("#word_count_alert").addClass('alert-success');
+                        $("#word_count_alert_heading").text("Nice!");
+                        $("#word_count_alert_message").text("This is a confident read of someone's personality. It's statistically significant! ...but wait, there's more! For only 6000 words, you'll get something so accurate it's scary. Do it!");                        
+                    } else if (response['word_count'] >= 1500) {
+                        $("#word_count_alert").addClass('alert-warning');
+                        $("#word_count_alert_heading").text("Hmmm...");
+                        $("#word_count_alert_message").text("These results are a general impression of this person, and they should be taken with a grain of salt. Increase the word count to 3500 to get a strong one!");
+                    } else {
+                        $("#word_count_alert").addClass('alert-danger');
+                        $("#word_count_alert_heading").text("Oh dear...");
+                        $("#word_count_alert_message").text("With this many words, you can't get a fair read on someone's personality. Can you use at least 1500 to get a general impression?");
+                    }
+
+
+                    var consumption_preferences_str = "<h2>Consumption Preferences</h2>";
+                    // Filter through Consumption Preferences
+                    response["consumption_preferences"].forEach(function(i,e){
+                        consumption_preferences_str += "<div class='consumption list-group'>";
+                        consumption_preferences_str += "<a class='list-group-item active'>"+i["name"]+"</a>";
+                        i["consumption_preferences"].forEach(function(j,k){ 
+                            if (j["score"] == 0) {
+                                l_class = 'list-group-item-danger';
+                            } else if(j["score"] == 1) {
+                                l_class = 'list-group-item-success';
+                            } else {
+                                l_class = 'list-group-item-warning';
+                            }
+                            consumption_preferences_str += "<a class='list-group-item "+l_class+"'>"+ j["name"] + " (" + j["score"] + ")</a>";
+                        });
+                        consumption_preferences_str += "</div>";
+                    });
+
+                    $("#consumption_list").append(consumption_preferences_str);
+
+                    // Filter through needs
+                    
+                    needs_high = [];
+                    
+                    needs_low = [];
+
+                    response["needs"].forEach(function(need){
+
+                        needs_high.push({'name': need['name'], 'score': need['percentile']});
+
+                        var need_string = "<div class='need' data-toggle='popover' title='"+need['name']+"' data-popover-class='"+need['trait_id']+"'>";
+                        
+                        need_string += "<span class='need_label'>"+need['name']+"</span>";
+                        need_string += "<div class='progress'><div class='progress-bar progress-bar-info' role='progressbar' style='width:"+need['percentile']*100+"%'>"+parseFloat(need['percentile']*100).toFixed(1)+"%</div></div>";
+
+                        need_string += "</div>";
+                        $("#__results_needs_list").append(need_string);
+                    });
+
+                    needs_high.sort(function(a, b){
+                        return b['score'] - a['score'];
+                    });
+
+                    // Filter through values
+                    var values = {'high': "", 'low': ""},
+                        high_score = 0,
+                        low_score = 100;
+
+                    response["values"].forEach(function(value){
+                        if (value['percentile'] > high_score) {
+                            values['high'] = value['name'];
+                            high_score = value['percentile'];
+                        }
+
+                        if(value['percentile'] < low_score) {
+                            values['low'] = value['name'];
+                            low_score = value['percentile'];
+                        }
+                        var value_string = "<div class='value' data-toggle='popover' title='"+value['name']+"' data-popover-class='"+value['trait_id']+"'>";
+                        
+                        value_string += "<span class='value_label'>"+value['name']+"</span>";
+                        value_string += "<div class='progress'><div class='progress-bar progress-bar-info' role='progressbar' style='width:"+value['percentile']*100+"%'>"+parseFloat(value['percentile']*100).toFixed(1)+"%</div></div>";
+
+                        value_string += "</div>";
+                        $("#__results_values_list").append(value_string);
+                    });
+
+                    // Filter through values
+                    big5_high = {'name': "", 'score': 0, 'desc': ""};
+                    big5_low = {'name': "", 'score': 10, 'desc': ""};
+                    
+                    response["personality"].forEach(function(personality){
+
+                        if (personality['percentile'] > big5_high['score']) {
+                            big5_high['name'] = personality['name'];
+                            big5_high['score'] = personality['percentile'];
+                            string = $(".tooltip."+personality['trait_id']).text();
+
+                            big5_high['desc'] = string.substr(string.indexOf("Higher: ") + "Higher: ".length, string.indexOf("Lower: ") - string.indexOf("Higher: ") - "Higher: ".length)
+                        } 
+
+                        if (personality['percentile'] < big5_low['score']) {
+                            big5_low['name'] = personality['name'];
+                            big5_low['score'] = personality['percentile'];
+                            string = $(".tooltip."+personality['trait_id']).text();
+
+                            big5_low['desc'] = string.substr(string.indexOf("Lower: ") + "Lower: ".length);
+                        }                       
+
+                        var personality_string = "<div class='personality' data-toggle='popover' title='"+personality['name']+"' data-popover-class='"+personality['trait_id']+"'  style='cursor: pointer;'>";
+                        
+                        personality_string += "<span class='personality_label'>"+personality['name']+"</span>";
+                        personality_string += "<div class='progress'><div class='progress-bar progress-bar-info' role='progressbar' style='width:"+personality['percentile']*100+"%'>"+parseFloat(personality['percentile']*100).toFixed(1)+"%</div></div>";
+                        personality_string += "<div class='children'>";
+                            child_string = "";
+                            personality['children'].forEach(function(child){
+                                child_string += "<div class='child' data-toggle='popover' title='"+child['name']+"' data-popover-class='"+child['trait_id']+"'>";
+                                child_string += "<span class='child_label'>"+child['name']+"</span>";
+                                child_string += "<div class='progress'><div class='progress-bar progress-bar-success' role='progressbar' style='width:"+child['percentile']*100+"%'>"+parseFloat(child['percentile']*100).toFixed(1)+"%</div></div>";
+                                child_string += "</div>";
+                            });
+                            personality_string += child_string;
+                        personality_string += "</div>";
+
+                        personality_string += "</div>";
+                        $("#__results_personality_list").append(personality_string);
+                    });
+
+                    // Filter through tones
+                    $(".tone_results").append("<h2>Sentiment Analysis of Tweets</h2>");
+
+                    var tones_count = {'sad': 0, 'frustrated': 0, 'satisfied': 0, 'excited': 0, 'polite': 0, 'impolite': 0, 'sympathetic': 0}
+
+                    response["tones"]["utterances_tone"].forEach(function(i,e){
+                        if (i["tones"].length > 0){
+                            var tone_string = "<div class='row'>";
+                                tone_string += "<div class='col-md-8 tweet_text'>";
+                                    tone_string += "<p>";
+                                        tone_string += i['utterance_text'];
+                                    tone_string += "</p>";
+                                tone_string += "</div>";
+                                tone_string += "<div class='col-md-4'>";
+                                    tone_string += "<ul>";
+                                    i['tones'].forEach(function(tone, ind) {
+
+                                        if (tone['score'] >= 0.75) tones_count[tone['tone_name'].toLowerCase()] += 1;
+
+                                        tone_string += "<li>";
+                                        tone_string += tone['tone_name'];
+                                        tone_string += " (";
+                                        tone_string += tone['score'];
+                                        tone_string += ")";
+                                        tone_string += "</li>";
+                                    });
+                                    tone_string += "</ul>";
+                                tone_string += "</div>";
+                            tone_string += "</div>";
+                            tone_string += "<hr style='border-color: #fff;'>";
+
+                            $(".tone_results").append(tone_string);
+                        }
+                    });
+
+                    /* 
+                        * Build out the Summary Page */
+                    // Twitter Handle 
+                    // twitter_handle=
+                    
+                    $(".twitter_handle_summary").text("@"+submittedData.substr(15));
+
+                    // Big 5 Personality
+                    $(".big5_high_summary").text(big5_high['name']);
+                    $(".big5_high_text_summary").text(big5_high['desc']);
+                    $(".big5_low_summary").text(big5_low['name']);
+                    $(".big5_low_text_summary").text(big5_low['desc']);
+
+                    $(".needs_1_summary").text(needs_high[0]['name']);
+                    $(".needs_2_summary").text(needs_high[1]['name']);
+                    $(".needs_3_summary").text(needs_high[2]['name']);
+
+                    $(".needs_low_1_summary").text(needs_high[needs_high.length - 1]['name']);
+                    $(".needs_low_2_summary").text(needs_high[needs_high.length - 2]['name']);
+                    $(".needs_low_3_summary").text(needs_high[needs_high.length - 3]['name']);
+
+                    $(".values_summary").text(values['high']);
+                    $(".values_low_summary").text(values['low']);
+                    
+
+
+                    var data = google.visualization.arrayToDataTable([
+                        ['Tone', 'Occurences'],
+                        ['Sadness', tones_count['sad']],
+                        ['Frustration', tones_count['frustrated']],
+                        ['Excitement', tones_count['excited']],
+                        ['Politeness', tones_count['polite']],
+                        ['Impoliteness', tones_count['impolite']],
+                        ['Sympathy', tones_count['sympathetic']]
+                    ]);
+
+                    var materialOptions = {
+                        chart: {
+                            title: ''
+                        },
+                        hAxis: {
+                            title: '# of Occurences',
+                            minValue: 0,
+                        },
+                        vAxis: {
+                            title: 'Tone'
+                        },
+                        bars: 'vertical',
+                        backgroundColor: {fill: '#f5f5f5'},
+                        chartArea: {
+                            backgroundColor: '#f5f5f5'
+                        },
+                        height: 300
+                    };
+                    
+                    var materialChart = new google.charts.Bar(document.getElementById('histogram_holder'));
+                    materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+                },
+                complete: function() {
+                    $("#__results_personality_list .personality").first().trigger("click");
+                }
+            });
+
+            return false;
+        });
+
+        $("#__results_personality_list").on("click", ".personality", function(){
+            $(this).children(".children").slideToggle();
+        });
+
+        var popOverSettings = {
+            placement: 'top',
+            container: 'body',
+            trigger: 'hover',
+            html: true,
+            selector: '[data-toggle="popover"]', //Sepcify the selector here
+            content: function () {
+                return $('.tooltip.'+$(this).data("popover-class")).html();
+            }
+        }
+
+        $('body').popover(popOverSettings);
+    </script>
+</body>
+</html>

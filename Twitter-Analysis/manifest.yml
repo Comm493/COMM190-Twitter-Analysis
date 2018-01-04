@@ -1,0 +1,5 @@
+---
+applications:
+ - name: comm190
+   random-route: true
+   memory: 128M
